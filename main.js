@@ -22,24 +22,33 @@ function analyzeNumber() {
 
 //////////////////////////////////////////////////////////////////////////////////////////////////
 
-function getSign() {
-    setNum('sign');
+function getSign(num) {
+    if (num > 0) {
+        return "pos"
+    } else if (num < 0) {
+        return "neg"
+    } else if (num = 0) {
+        return "zero"
+    }
 }
 
-function evenOrOdd() {
-    setNum('even-odd');
+function evenOrOdd(num) {
+    if (num % 2 == 0) {
+        return even
+    } else {
+        return odd
+    }
 }
 
-function multipleOf10() {
-    setNum('multiple');
-}
+function multipleOf10(num) {
+    if (num % 10 == 0) {
+        return true
+    } else {
+        return false
+    }
+} 
 
 
-function setNum(name) {
-    return numInput = Number(numEl.value);
 
-    // Analyze Number and display results
-    document.getElementById(name).innerHTML = getSign(numInput);
-    document.getElementById(name).innerHTML = evenOrOdd(numInput);
-    document.getElementById(name).innerHTML = multipleOf10(numInput);
-}
+
+
